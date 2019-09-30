@@ -11,9 +11,10 @@
         <title>The bank list</title>
     </head>
     <body>
-    <p>Сумма: ${sum}</p>
-    <form name="Simple" action="action" method="POST">
-        <input type="submit" name="button" value="Посчитать сумму" />
+    <p>Richest users: ${users}</p>
+    <p>Accounts sum: ${sum}</p>
+    <form name="get" action="action" method="POST">
+        <input type="submit" name="button" value="get" />
     </form>
     </body>
 </html>

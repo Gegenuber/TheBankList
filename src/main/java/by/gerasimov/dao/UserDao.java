@@ -8,5 +8,6 @@ import java.util.List;
 public interface UserDao {
     List<User> getAllUsers() throws SQLException;
     User getUserById(int id) throws SQLException;
+    String getRichestUsersToString() throws SQLException;
     List<User> getRichestUsers() throws SQLException;
 }

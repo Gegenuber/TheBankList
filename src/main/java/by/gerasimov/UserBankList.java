@@ -17,12 +17,12 @@ public class UserBankList {
         AccountDao accountDao = new AccountDaoImpl();
         System.out.println(accountDao.getAllAccounts());
         System.out.println(accountDao.getAccountSum());
-        String richestUsers = new String();
+        StringBuilder richestUsers = new StringBuilder();
         List<User> users = userDao.getRichestUsers();
-        for (User u: users) {
-            richestUsers += u.toUserString() + ", ";
+        for (User u : users) {
+            richestUsers.append(u.toUserString()).append(", ");
         }
-        richestUsers = richestUsers.substring(0, richestUsers.length() - 2);
+        richestUsers = new StringBuilder(richestUsers.substring(0, richestUsers.length() - 2));
         System.out.println(richestUsers);
     }
 }

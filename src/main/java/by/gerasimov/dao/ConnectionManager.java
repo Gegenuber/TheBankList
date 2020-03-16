@@ -6,14 +6,14 @@ import java.sql.SQLException;
 
 public class ConnectionManager {
 
-    private static String url = "jdbc:mysql://localhost:3306/userBankList?useTimezone=true&serverTimezone=UTC";
-    private static String user = "root";
-    private static String password = "1111";
+    private static final String URL = "jdbc:mysql://localhost:3306/userBankList?useTimezone=true&serverTimezone=UTC";
+    private static final String USER = "root";
+    private static final String PASSWORD = "1111";
 
     public static Connection getConnection() {
         Connection connection = null;
         try {
-            connection = DriverManager.getConnection(url, user, password);
+            connection = DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (SQLException e) {
             e.printStackTrace();
         }
